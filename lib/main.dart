@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:groceries_app/src/screens/splash_screen.dart';
+import 'package:groceries_app/src/screens/log_in.dart';
+import 'package:groceries_app/src/screens/sign_up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
               textTheme: ButtonTextTheme.primary, // Màu chữ cho nút
             ),
           ),
-          home: const SplashScreen(),
+          home: const SignUp(),
         );
       },
     );
