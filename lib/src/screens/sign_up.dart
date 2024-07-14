@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app/src/constants/colors.dart';
+import 'package:groceries_app/src/screens/log_in.dart';
 import 'package:groceries_app/src/widget/button_reponsive.dart';
 
 class SignUp extends StatefulWidget {
@@ -10,6 +11,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  bool isObscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,20 +96,26 @@ class _SignUpState extends State<SignUp> {
                 const SizedBox(
                   height: 30,
                 ),
-                const TextField(
-                  obscureText: true,
+                TextField(
+                  obscureText: isObscureText,
                   decoration: InputDecoration(
-                    label: Text(
+                    label: const Text(
                       'Passwword',
                       style: TextStyle(fontSize: 15),
                     ),
-                    focusedBorder: UnderlineInputBorder(
+                    focusedBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(
                           color: Colors.grey), // Đường viền dưới khi có focus
                     ),
                     suffixIcon: IconButton(
-                      onPressed: null,
-                      icon: Icon(Icons.remove_red_eye_outlined),
+                      onPressed: () {
+                        setState(() {
+                          isObscureText = !isObscureText;
+                        });
+                      },
+                      icon: Icon(isObscureText
+                          ? Icons.visibility_off
+                          : Icons.visibility),
                     ),
                   ),
                 ),
@@ -172,10 +181,10 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Don't have an account?",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
@@ -183,8 +192,14 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     TextButton(
-                      onPressed: null,
-                      child: Text(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LogIn(),
+                            ));
+                      },
+                      child: const Text(
                         'Singup',
                         style: TextStyle(
                           color: AppColors.greenColor,
