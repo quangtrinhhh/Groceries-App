@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#53B175" # Màu nền cho màn hình splash
+  image: assets/images/logo_splash.png # Đường dẫn tới hình ảnh splash
+  android: true # Kích hoạt cho Android
+  ios: true # Kích hoạt cho iOS
+  web: true # Kích hoạt cho Web
+  android_gravity: center # Vị trí của hình ảnh trên Android
+  ios_content_mode: scaleAspectFill # Vị trí của hình ảnh trên iOS
+  web_image_mode: center # Vị trí của hình ảnh trên Web

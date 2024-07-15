@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:groceries_app/src/screens/onbording.dart';
+// import 'package:groceries_app/src/screens/sign_in.dart';
 import 'package:groceries_app/src/screens/splash_screen.dart';
 
 void main() {
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             brightness: Brightness.light,
-            scaffoldBackgroundColor: Colors.white,
+            scaffoldBackgroundColor: const Color(0xFFfcfcfc),
             appBarTheme: AppBarTheme(
               backgroundColor: Colors.white, // Màu nền cho AppBar
               iconTheme: const IconThemeData(color: Colors.black),
