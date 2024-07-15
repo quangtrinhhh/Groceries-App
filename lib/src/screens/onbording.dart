@@ -30,7 +30,7 @@ class _OnbordingState extends State<Onbording> {
                 child: Column(
                   children: [
                     Image.asset(
-                      "assets/images/logo_white.png",
+                      "assets/images/logo_splash.png",
                       width: 48.47.w,
                       height: 56.36.h,
                     ),

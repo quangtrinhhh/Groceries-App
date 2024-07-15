@@ -1,7 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/src/constants/strings.dart';
 import 'package:groceries_app/src/screens/sign_up.dart';
 
+import 'package:groceries_app/src/constants/colors.dart';
 import 'package:groceries_app/src/widget/button_reponsive.dart';
 
 class SelectLocation extends StatefulWidget {
@@ -13,8 +17,6 @@ class SelectLocation extends StatefulWidget {
 
 class _SelectLocationState extends State<SelectLocation> {
   String? selectedOption;
-
- 
 
   List<String> provincesVietnam = [
     'An Giang',
@@ -93,7 +95,15 @@ class _SelectLocationState extends State<SelectLocation> {
                 image: AssetImage('assets/images/backgroud_login.png'),
                 fit: BoxFit.cover,
               ),
-              color: Colors.white,
+            ),
+          ),
+          BackdropFilter(
+            filter: ImageFilter.blur(
+              sigmaX: 25.0,
+              sigmaY: 25.0,
+            ),
+            child: Container(
+              color: AppColors.backgroundColor.withOpacity(0.6),
             ),
           ),
           SafeArea(
@@ -119,18 +129,18 @@ class _SelectLocationState extends State<SelectLocation> {
                           image: AssetImage('assets/images/illustration.png'),
                         ),
                         const SizedBox(height: 30),
-                        const SizedBox(
-                          width: 350,
+                        SizedBox(
+                          width: 350.w,
                           child: Column(
                             children: [
                               Text(
                                 AppStrings.selectYourLocation,
                                 style: TextStyle(
-                                  fontSize: 26,
+                                  fontSize: 26.sp,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              SizedBox(height: 10.h),
                               Text(
                                 AppStrings.messSlesctLocation,
                                 textAlign: TextAlign.center,
@@ -159,7 +169,6 @@ class _SelectLocationState extends State<SelectLocation> {
                           }).toList(),
                           decoration: const InputDecoration(
                             labelText: 'Chọn vùng',
-                            filled: true,
                           ),
                         ),
                         const SizedBox(

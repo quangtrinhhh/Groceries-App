@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:groceries_app/src/constants/colors.dart';
 import 'package:groceries_app/src/constants/strings.dart';
@@ -19,12 +21,21 @@ class _LogInState extends State<LogIn> {
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
-          Container(
+         Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/backgroud_login.png'),
                 fit: BoxFit.cover,
               ),
+            ),
+          ),
+          BackdropFilter(
+            filter: ImageFilter.blur(
+              sigmaX: 25.0,
+              sigmaY: 25.0,
+            ),
+            child: Container(
+              color: AppColors.backgroundColor.withOpacity(0.6),
             ),
           ),
           SafeArea(

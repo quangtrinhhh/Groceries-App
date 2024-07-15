@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:groceries_app/src/screens/select_location.dart';
+import 'package:groceries_app/src/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +47,7 @@ class MyApp extends StatelessWidget {
               textTheme: ButtonTextTheme.primary, // Màu chữ cho nút
             ),
           ),
-          home: const SelectLocation(),
+          home: const SplashScreen(),
         );
       },
     );

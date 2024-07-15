@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:groceries_app/src/screens/number.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -9,7 +10,7 @@ class SignIn extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Stack(
-          children: [ 
+          children: [
             Positioned(
               top: -180.h,
               left: 80.w,
@@ -36,14 +37,36 @@ class SignIn extends StatelessWidget {
                       "Nhận hàng\ncủa bạn với nectar",
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         fontSize: 26.sp,
                       ),
                     ),
                   ),
                   30.61.verticalSpace,
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  Number(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            var begin = const Offset(0.0, 1.0);
+                            var end = Offset.zero;
+                            var curve = Curves.ease;
+
+                            var tween = Tween(begin: begin, end: end)
+                                .chain(CurveTween(curve: curve));
+
+                            return SlideTransition(
+                              position: animation.drive(tween),
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
+                    },
                     child: Container(
                       padding: EdgeInsets.only(bottom: 15.h),
                       decoration: const BoxDecoration(
