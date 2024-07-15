@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:groceries_app/src/constants/colors.dart';
 import 'package:groceries_app/src/widget/button_reponsive.dart';
 
 class SelectLocation extends StatefulWidget {
@@ -88,7 +91,15 @@ class _SelectLocationState extends State<SelectLocation> {
                 image: AssetImage('assets/images/backgroud_login.png'),
                 fit: BoxFit.cover,
               ),
-              color: Colors.white,
+            ),
+          ),
+          BackdropFilter(
+            filter: ImageFilter.blur(
+              sigmaX: 25.0,
+              sigmaY: 25.0,
+            ),
+            child: Container(
+              color: AppColors.backgroundColor.withOpacity(0.6),
             ),
           ),
           SafeArea(

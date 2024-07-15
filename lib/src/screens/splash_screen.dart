@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:groceries_app/src/constants/colors.dart';
 import 'package:groceries_app/src/screens/onbording.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,8 +29,12 @@ class _SplashScreenState extends State<SplashScreen> {
       const AssetImage('assets/images/onbording/background.png'),
       context,
     );
-    precacheImage(
+    await precacheImage(
       const AssetImage("assets/images/sign_in/background.png"),
+      context,
+    );
+    await precacheImage(
+      const AssetImage("assets/images/backgroud_login.png"),
       context,
     );
 
@@ -38,8 +43,8 @@ class _SplashScreenState extends State<SplashScreen> {
       _assetsPreloaded = true;
     });
 
-    // Đợi 2 giây để hiển thị Splash Screen trước khi chuyển hướng
-    await Future.delayed(const Duration(seconds: 2));
+    // Đợi 1 giây để hiển thị Splash Screen trước khi chuyển hướng
+    await Future.delayed(const Duration(seconds: 1));
 
     // Chuyển hướng đến màn hình Onbording khi các assets đã sẵn sàng
     if (_assetsPreloaded) {
@@ -56,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     // Gọi build() để cập nhật các thay đổi từ _assetsPreloaded và các phần tử kế thừa
     return Scaffold(
-      backgroundColor: const Color(0xFF53B175),
+      backgroundColor: AppColors.greenColor,
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -64,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               margin: const EdgeInsets.only(bottom: 5),
               child: Image.asset(
-                "assets/images/logo_white.png",
+                "assets/images/logo_splash.png",
                 width: 54.7.w,
                 height: 63.61.h,
               ),
