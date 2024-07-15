@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app/src/constants/colors.dart';
+import 'package:groceries_app/src/constants/strings.dart';
 import 'package:groceries_app/src/screens/log_in.dart';
 import 'package:groceries_app/src/widget/button_reponsive.dart';
 
@@ -44,7 +45,7 @@ class _SignUpState extends State<SignUp> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Sign Up',
+                        AppStrings.signUp,
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 26,
@@ -54,7 +55,7 @@ class _SignUpState extends State<SignUp> {
                         height: 10,
                       ),
                       Text(
-                        'Enter your credentials to continue',
+                        AppStrings.messSignUP,
                         style: TextStyle(
                           fontSize: 16,
                           color: AppColors.greyColor,
@@ -69,7 +70,7 @@ class _SignUpState extends State<SignUp> {
                 const TextField(
                   decoration: InputDecoration(
                     label: Text(
-                      'Username',
+                      AppStrings.userName,
                       style: TextStyle(fontSize: 15),
                     ),
                     focusedBorder: UnderlineInputBorder(
@@ -123,9 +124,11 @@ class _SignUpState extends State<SignUp> {
                   height: 20,
                 ),
                 const Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.start,
+                  alignment: WrapAlignment.start,
                   children: [
                     Text(
-                      'By continuing you agree to our',
+                      AppStrings.messTerm,
                       style: TextStyle(
                         color: AppColors.greyColor,
                         fontWeight: FontWeight.w500,
@@ -136,7 +139,7 @@ class _SignUpState extends State<SignUp> {
                       width: 6,
                     ),
                     Text(
-                      'Terms of Service',
+                      AppStrings.termsOfService,
                       style: TextStyle(
                         color: AppColors.greenColor,
                         fontWeight: FontWeight.w500,
@@ -147,7 +150,7 @@ class _SignUpState extends State<SignUp> {
                       width: 6,
                     ),
                     Text(
-                      'add',
+                      '& ',
                       style: TextStyle(
                         color: AppColors.greyColor,
                         fontWeight: FontWeight.w500,
@@ -155,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     Text(
-                      'Terms of Service',
+                      AppStrings.privacyPolicy,
                       style: TextStyle(
                         color: AppColors.greenColor,
                         fontWeight: FontWeight.w500,
@@ -177,7 +180,7 @@ class _SignUpState extends State<SignUp> {
                           vertical: 0), // Padding cho nút
                     ),
                     child: ReposiveButton(
-                      text: 'Sing Up',
+                      text: AppStrings.signUp,
                     ),
                   ),
                 ),
@@ -185,7 +188,7 @@ class _SignUpState extends State<SignUp> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Don't have an account?",
+                      AppStrings.alreadyAccount,
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -200,7 +203,7 @@ class _SignUpState extends State<SignUp> {
                             ));
                       },
                       child: const Text(
-                        'Singup',
+                        AppStrings.login,
                         style: TextStyle(
                           color: AppColors.greenColor,
                           fontSize: 14,

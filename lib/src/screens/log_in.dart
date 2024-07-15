@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app/src/constants/colors.dart';
+import 'package:groceries_app/src/constants/strings.dart';
 import 'package:groceries_app/src/screens/sign_up.dart';
 import 'package:groceries_app/src/widget/button_reponsive.dart';
 
@@ -43,7 +44,7 @@ class _LogInState extends State<LogIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Loging',
+                        AppStrings.login,
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 26,
@@ -53,7 +54,7 @@ class _LogInState extends State<LogIn> {
                         height: 10,
                       ),
                       Text(
-                        'Enter your emails and password',
+                        AppStrings.messLogin,
                         style: TextStyle(
                           fontSize: 16,
                           color: AppColors.greyColor,
@@ -107,7 +108,7 @@ class _LogInState extends State<LogIn> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      'Forgot Password?',
+                      AppStrings.forgotPass,
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
@@ -129,7 +130,7 @@ class _LogInState extends State<LogIn> {
                           vertical: 0), // Padding cho nút
                     ),
                     child: ReposiveButton(
-                      text: 'Login',
+                      text: AppStrings.login,
                     ),
                   ),
                 ),
@@ -137,7 +138,7 @@ class _LogInState extends State<LogIn> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Don't have an account?",
+                      AppStrings.noAccount,
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -152,7 +153,7 @@ class _LogInState extends State<LogIn> {
                             ));
                       },
                       child: const Text(
-                        'Signup',
+                        AppStrings.signUp,
                         style: TextStyle(
                           color: AppColors.greenColor,
                           fontSize: 14,

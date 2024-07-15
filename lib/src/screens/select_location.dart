@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app/src/constants/strings.dart';
+import 'package:groceries_app/src/screens/sign_up.dart';
+
 import 'package:groceries_app/src/widget/button_reponsive.dart';
 
 class SelectLocation extends StatefulWidget {
@@ -10,6 +13,8 @@ class SelectLocation extends StatefulWidget {
 
 class _SelectLocationState extends State<SelectLocation> {
   String? selectedOption;
+
+ 
 
   List<String> provincesVietnam = [
     'An Giang',
@@ -119,7 +124,7 @@ class _SelectLocationState extends State<SelectLocation> {
                           child: Column(
                             children: [
                               Text(
-                                'Select Your Location',
+                                AppStrings.selectYourLocation,
                                 style: TextStyle(
                                   fontSize: 26,
                                   fontWeight: FontWeight.w600,
@@ -127,7 +132,7 @@ class _SelectLocationState extends State<SelectLocation> {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                'Swithch on your location to stay in tune with\nwhat’s happening in your area',
+                                AppStrings.messSlesctLocation,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Color(0xFF7C7C7C),
@@ -153,7 +158,7 @@ class _SelectLocationState extends State<SelectLocation> {
                             );
                           }).toList(),
                           decoration: const InputDecoration(
-                            labelText: 'Your Zone',
+                            labelText: 'Chọn vùng',
                             filled: true,
                           ),
                         ),
@@ -174,7 +179,7 @@ class _SelectLocationState extends State<SelectLocation> {
                             );
                           }).toList(),
                           decoration: const InputDecoration(
-                            labelText: 'Your Area',
+                            labelText: 'Chọn khu vực',
                           ),
                         ),
                         const SizedBox(
@@ -184,10 +189,14 @@ class _SelectLocationState extends State<SelectLocation> {
                           style: ButtonStyle(
                             minimumSize: WidgetStateProperty.all(
                               const Size(double.infinity, 10),
-                            ), // Đặt chiều rộng tối thiểu và chiều cao của nút
+                            ),
                           ),
                           onPressed: () {
-                            // Xử lý khi nút được nhấn
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignUp(),
+                                ));
                           },
                           child: ReposiveButton(
                             text: 'Submit',
