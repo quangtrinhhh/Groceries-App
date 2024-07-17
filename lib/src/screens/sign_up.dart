@@ -112,7 +112,7 @@ class _SignUpState extends State<SignUp> {
                   obscureText: isObscureText,
                   decoration: InputDecoration(
                     label: const Text(
-                      'Passwword',
+                      'Mất khẩu',
                       style: TextStyle(fontSize: 15),
                     ),
                     focusedBorder: const UnderlineInputBorder(

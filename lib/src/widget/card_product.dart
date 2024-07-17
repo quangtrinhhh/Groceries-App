@@ -14,64 +14,62 @@ class _CardProductState extends State<CardProduct> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 173.w,
-        height: 248.h,
+        width: 173.32.w,
+        height: 263.2.h,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
-          border: Border.all(width: 1, color: AppColors.greyColor),
+          borderRadius: BorderRadius.all(Radius.circular(18.r)),
+          border: Border.all(width: 1.w, color: AppColors.cardBorderColor),
           color: Colors.white,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:
+              EdgeInsets.only(left: 15.w, right: 15.w, bottom: 15.w, top: 25.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Image(
-                image: AssetImage('assets/images/banana.png'),
-                width: 99.w,
-                height: 79.h,
+              Center(
+                child: Image(
+                  image: AssetImage('assets/images/banana.png'),
+                  width: 99.89.w,
+                  height: 79.43.h,
+                ),
               ),
-              SizedBox(
-                height: 12,
+              25.verticalSpace,
+              Text(
+                'Organic Bananas1111111111',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    fontSize: 16.sp,
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.w600),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Organic Bananas',
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    '7pcs, Priceg',
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      color: AppColors.greyColor,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
+              5.verticalSpace,
+              Text(
+                '7pcs, Priceg',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  color: AppColors.greyColor,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.start,
               ),
-              SizedBox(
-                height: 30,
-              ),
+              20.verticalSpace,
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     '\$4.99',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 18.sp,
                       color: Colors.black,
                       decoration: TextDecoration.none,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   GestureDetector(
@@ -82,13 +80,14 @@ class _CardProductState extends State<CardProduct> {
                       decoration: BoxDecoration(
                         color: AppColors.greenColor,
                         borderRadius: BorderRadius.all(
-                          Radius.circular(15),
+                          Radius.circular(15.r),
                         ),
                       ),
                       child: Center(
                         child: Icon(
-                          Icons.add,
+                          Icons.add_outlined,
                           color: Colors.white,
+                          size: 25.sp,
                         ),
                       ),
                     ),

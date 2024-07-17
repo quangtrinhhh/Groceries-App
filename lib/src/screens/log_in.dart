@@ -21,7 +21,7 @@ class _LogInState extends State<LogIn> {
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
-         Container(
+          Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/backgroud_login.png'),
@@ -93,10 +93,10 @@ class _LogInState extends State<LogIn> {
                   height: 30,
                 ),
                 TextField(
-                  obscureText: true,
+                  obscureText: isObscureText ? true : false,
                   decoration: InputDecoration(
                     label: const Text(
-                      'Passwword',
+                      'Mất khẩu',
                       style: TextStyle(fontSize: 15),
                     ),
                     focusedBorder: const UnderlineInputBorder(
@@ -104,7 +104,9 @@ class _LogInState extends State<LogIn> {
                     ),
                     suffixIcon: IconButton(
                       onPressed: () {
-                        isObscureText = !isObscureText;
+                        setState(() {
+                          isObscureText = !isObscureText;
+                        });
                       },
                       icon: Icon(isObscureText
                           ? Icons.visibility_off

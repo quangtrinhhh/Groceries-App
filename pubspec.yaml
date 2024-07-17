@@ -37,6 +37,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_native_splash: ^2.4.1
   flutter_launcher_icons: ^0.13.1
+  font_awesome_flutter: ^10.2.1
 
 flutter_icons:
   android: true
@@ -71,6 +72,7 @@ flutter:
     - assets/images/onbording/
     - assets/images/splash_screen/
     - assets/images/sign_in/
+    - assets/images/bottom_navigation_icon/
     - assets/animations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
