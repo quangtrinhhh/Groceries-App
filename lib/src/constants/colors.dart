@@ -5,4 +5,5 @@ class AppColors {
   static const Color greenColor = Color(0xff53B175);
   static const Color backgroundColor = Color(0xFFfcfcfc);
   static const Color cardBorderColor = Color(0xFFE2E2E2);
+  static const Color searchColor = Color(0xFFF2F3F2);
 }

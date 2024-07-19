@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/src/screens/my_home_page.dart';
-import 'package:groceries_app/src/screens/sign_up.dart';
-import 'package:groceries_app/src/screens/splash_screen.dart';
-import 'package:groceries_app/src/widget/card_product.dart';
 
 void main() {
   runApp(const MyApp());

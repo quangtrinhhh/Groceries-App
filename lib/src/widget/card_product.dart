@@ -14,8 +14,6 @@ class _CardProductState extends State<CardProduct> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 173.32.w,
-        height: 263.2.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(18.r)),
           border: Border.all(width: 1.w, color: AppColors.cardBorderColor),
