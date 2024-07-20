@@ -13,6 +13,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late FocusNode _focusNode;
+  bool onFocus = false;
+  @override
+  void initState() {
+    super.initState();
+    _focusNode = FocusNode();
+  }
+
+  void _handelFocus(bool hasFocus) {
+    setState(() {
+      onFocus = hasFocus;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -50,7 +64,10 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   23.verticalSpace,
-                  InputSearchWidget(),
+                  InputSearchWidget(
+                    focusNode: _focusNode,
+                    handelFocus: _handelFocus,
+                  ),
                   20.verticalSpace,
                   BannerWidget(),
                 ],

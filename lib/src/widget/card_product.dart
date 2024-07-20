@@ -43,22 +43,19 @@ class _CardProductState extends State<CardProduct> {
                     height: 69.43,
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
                 Text(
-                  'Organic Bananas1111111111',
+                  'Organic Bananas',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w600),
+                    fontSize: 16,
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-                SizedBox(
-                  height: 3,
-                ),
+                SizedBox(height: 3),
                 Text(
                   '7pcs, Priceg',
                   maxLines: 1,
@@ -71,9 +68,7 @@ class _CardProductState extends State<CardProduct> {
                   ),
                   textAlign: TextAlign.start,
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -93,9 +88,7 @@ class _CardProductState extends State<CardProduct> {
                         height: 45,
                         decoration: BoxDecoration(
                           color: AppColors.greenColor,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(15),
-                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
                         ),
                         child: Center(
                           child: Icon(
@@ -105,9 +98,9 @@ class _CardProductState extends State<CardProduct> {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),

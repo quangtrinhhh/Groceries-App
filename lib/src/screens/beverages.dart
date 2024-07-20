@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/src/constants/colors.dart';
+import 'package:groceries_app/src/constants/size.dart';
 import 'package:groceries_app/src/widget/card_product.dart';
 
-class ProductCategory extends StatelessWidget {
-  const ProductCategory({super.key, required this.categoryName});
+class Beverages extends StatefulWidget {
+  const Beverages({super.key, required this.categoryName});
   final String categoryName;
 
+  @override
+  State<Beverages> createState() => _BeveragesState();
+}
+
+class _BeveragesState extends State<Beverages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Text(
-          categoryName,
+          widget.categoryName,
           style: TextStyle(
             color: Colors.black,
             fontSize: 21.sp,
@@ -55,25 +61,17 @@ class ProductCategory extends StatelessWidget {
           SliverPadding(
             padding: EdgeInsets.only(
                 bottom: 30.h, top: 20.h, left: 25.w, right: 25.w),
-            sliver: SliverGrid(
+            sliver: SliverGrid.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 15, // Khoảng cách giữa các hàng
                 crossAxisSpacing: 15, // Khoảng cách giữa các cột
-                childAspectRatio: 163 / 235,
+                childAspectRatio:
+                    AppSize.widthCardProduct / AppSize.heightCardProduct,
               ),
-              delegate: SliverChildListDelegate(
-                [
-                  CardProduct(),
-                  CardProduct(),
-                  CardProduct(),
-                  CardProduct(),
-                  CardProduct(),
-                  CardProduct(),
-                  CardProduct(),
-                  CardProduct(),
-                ],
-              ),
+              itemBuilder: (context, index) {
+                return CardProduct();
+              },
             ),
           ),
         ],

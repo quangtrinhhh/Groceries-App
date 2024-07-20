@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/src/constants/colors.dart';
 
 class ReposiveButton extends StatelessWidget {
@@ -19,7 +20,7 @@ class ReposiveButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 60,
+      height: 67.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: AppColors.greenColor,

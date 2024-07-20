@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:groceries_app/src/screens/product_category.dart';
+import 'package:groceries_app/src/screens/beverages.dart';
 
 class BeefBone extends StatelessWidget {
   const BeefBone({
@@ -20,7 +20,7 @@ class BeefBone extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(PageRouteBuilder(
           pageBuilder: (context, animation, secondaryAnimation) =>
-              ProductCategory(categoryName: name),
+              Beverages(categoryName: name),
         ));
       },
       child: Container(
