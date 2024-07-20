@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:groceries_app/src/constants/colors.dart';
 import 'package:groceries_app/src/screens/my_home_page.dart';
-import 'package:groceries_app/src/screens/sign_up.dart';
-import 'package:groceries_app/src/screens/splash_screen.dart';
-import 'package:groceries_app/src/widget/card_product.dart';
+// import 'package:groceries_app/src/screens/sign_up.dart';
+// import 'package:groceries_app/src/screens/splash_screen.dart';
+// import 'package:groceries_app/src/widget/card_product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,9 +26,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             brightness: Brightness.light,
-            scaffoldBackgroundColor: const Color(0xFFfcfcfc),
+            scaffoldBackgroundColor: AppColors.backgroundColor,
             appBarTheme: AppBarTheme(
-              backgroundColor: Colors.white, // Màu nền cho AppBar
+              backgroundColor: AppColors.backgroundColor, // Màu nền cho AppBar
               iconTheme: const IconThemeData(color: Colors.black),
               toolbarTextStyle: const TextTheme(
                 titleLarge: TextStyle(

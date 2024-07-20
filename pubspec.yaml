@@ -38,6 +38,8 @@ dependencies:
   flutter_native_splash: ^2.4.1
   flutter_launcher_icons: ^0.13.1
   font_awesome_flutter: ^10.2.1
+  carousel_slider: ^4.2.1
+  smooth_page_indicator: ^1.2.0
 
 flutter_icons:
   android: true
@@ -72,6 +74,8 @@ flutter:
     - assets/images/onbording/
     - assets/images/splash_screen/
     - assets/images/sign_in/
+    - assets/images/home_page/
+    - assets/images/explore_page/
     - assets/images/bottom_navigation_icon/
     - assets/animations/
 
